@@ -1,0 +1,8 @@
+# volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ +10%
+bindsym XF86AudioLowerVolume exec --no-startup-id /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ -10%
+bindsym XF86AudioMute exec --no-startup-id /usr/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id /usr/bin/brightnessctl set 10%+
+bindsym XF86MonBrightnessDown exec --no-startup-id /usr/bin/brightnessctl set 10%-

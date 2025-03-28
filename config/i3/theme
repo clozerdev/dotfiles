@@ -1,0 +1,24 @@
+# window positioning
+default_border pixel 2
+default_floating_border pixel 2
+hide_edge_borders both
+title_align center
+gaps inner 10
+
+# gruvbox colors
+set $background #282828
+set $background-alt #3c3836
+set $foreground #fbf1c7
+set $foreground-alt #ffffff
+set $primary #D79921
+set $secondary #458588
+set $alert #CC241D
+set $disabled #928374
+
+# window aspect
+client.focused          $primary        $primary    $primary    $primary    $primary
+client.unfocused        $disabled       $disabled   $disabled   $disabled   $disabled
+client.focused_inactive $disabled       $disabled   $disabled   $disabled   $disabled
+client.urgent           $alert          $alert      $primary    $alert      $alert
+
+font xft:Terminess Nerd Font Mono 12

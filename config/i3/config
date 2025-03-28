@@ -1,0 +1,27 @@
+set $mod Mod4
+set $alt Mod1
+
+# mouse and i3 behaviour
+mouse_warping none
+focus_follows_mouse yes
+workspace_auto_back_and_forth yes
+focus_wrapping workspace
+
+# commands
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+q kill
+bindsym $mod+f fullscreen
+bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
+bindsym $mod+p exec --no-startup-id /usr/bin/polybar-msg cmd toggle
+bindsym $mod+d exec --no-startup-id /usr/bin/rofi -show drun -show-icons
+bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# includes
+include autostart
+include theme
+include winman
+include mediakeys
+
+# specifics
+for_window[class="Thunar"] floating enable
+for_window[class="Pavucontrol"] floating enable

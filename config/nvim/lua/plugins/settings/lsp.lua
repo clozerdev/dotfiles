@@ -76,12 +76,10 @@ cmp.setup({
 	}),
 	window = {
 		completion = cmp.config.window.bordered({
-			border = "single",
-			winhighlight = "Normal:Normal,FloatBorder:Normal,CursorLine:PmenuSel,Search:NONE",
+			border = "rounded",
 		}),
 		documentation = cmp.config.window.bordered({
-			border = "single",
-			winhighlight = "Normal:Normal,FloatBorder:Normal,CursorLine:PmenuSel,Search:NONE",
+			border = "rounded",
 		}),
 	},
 	formatting = {

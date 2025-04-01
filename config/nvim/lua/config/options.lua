@@ -4,12 +4,12 @@ local opt = vim.opt
 opt.completeopt = { "menu", "menuone", "preview", "noselect" }
 
 -- visual
-opt.list = true
+opt.list = false
 opt.number = true
 opt.cmdheight = 0
 opt.scrolloff = 8
 opt.showmode = false
-opt.cursorline = false
+opt.cursorline = true
 opt.signcolumn = "yes"
 opt.relativenumber = true
 

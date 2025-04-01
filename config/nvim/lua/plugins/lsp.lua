@@ -1,5 +1,5 @@
 return {
-    -- LSP Configuration
+	-- LSP Configuration
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
@@ -12,17 +12,17 @@ return {
 			require("plugins.settings.lsp")
 		end,
 	},
-    -- Completion engine: nvim-cmp
+	-- Completion engine: nvim-cmp
 	{
 		"hrsh7th/nvim-cmp",
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-buffer",
 			"hrsh7th/cmp-path",
-            "hrsh7th/cmp-nvim-lsp-signature-help"
+			"hrsh7th/cmp-nvim-lsp-signature-help",
 		},
 	},
-    -- Show progress
+	-- Show progress
 	{
 		"j-hui/fidget.nvim",
 		opts = {},

@@ -20,16 +20,16 @@ return {
 		"stevearc/dressing.nvim",
 		opts = {},
 	},
-	-- {
-	-- 	"nvim-lualine/lualine.nvim",
-	-- 	event = "VimEnter",
-	-- 	config = function()
-	-- 		require("lualine").setup({
-	-- 			options = {
-	-- 				theme = "auto",
-	-- 				globalstatus = true,
-	-- 			},
-	-- 		})
-	-- 	end,
-	-- },
+	{
+		"nvim-lualine/lualine.nvim",
+		event = "VimEnter",
+		config = function()
+			require("lualine").setup({
+				options = {
+					theme = "auto",
+					globalstatus = true,
+				},
+			})
+		end,
+	},
 }

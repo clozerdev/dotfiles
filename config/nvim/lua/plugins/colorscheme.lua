@@ -1,9 +1,11 @@
 return {
-	"EdenEast/nightfox.nvim",
+	"navarasu/onedark.nvim",
+	priority = 1000, -- Ensure it loads first
 	lazy = false,
-	priority = 1000,
 	config = function()
-		require("nightfox").setup()
-		vim.cmd.colorscheme("carbonfox")
+		require("onedark").setup({
+			style = "warmer"
+		})
+		vim.cmd.colorscheme("onedark")
 	end,
 }

@@ -5,11 +5,13 @@ opt.completeopt = { "menu", "menuone", "preview", "noselect" }
 
 -- visual
 opt.list = false
+opt.wrap = false
 opt.number = true
 opt.cmdheight = 0
 opt.scrolloff = 8
+opt.conceallevel = 2
 opt.showmode = false
-opt.cursorline = true
+opt.cursorline = false
 opt.signcolumn = "yes"
 opt.relativenumber = true
 

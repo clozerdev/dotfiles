@@ -3,4 +3,5 @@
 # exec		-> exceute only once when starting i3
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always --no-startup-id /usr/bin/feh --bg-fill --no-fehbg $HOME/.config/wallpapers/buildings.png
+exec_always --no-startup-id /usr/local/bin/picom --config $HOME/.config/picom/picom.conf -b
+exec_always --no-startup-id /usr/bin/feh --bg-fill --no-fehbg $HOME/.config/wallpapers/island.jpg

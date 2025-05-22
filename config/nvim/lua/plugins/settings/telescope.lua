@@ -4,7 +4,7 @@ local builtin = require("telescope.builtin")
 telescope.setup({
 	pickers = {
 		find_files = {
-			-- theme = "ivy",
+			theme = "ivy",
 		},
 	},
 	extensions = {

@@ -74,14 +74,14 @@ cmp.setup({
 		["<C-o>"] = cmp.mapping.confirm({ select = true }),
 		["<C-e>"] = cmp.mapping.abort(),
 	}),
-	window = {
-		completion = cmp.config.window.bordered({
-			border = "rounded",
-		}),
-		documentation = cmp.config.window.bordered({
-			border = "rounded",
-		}),
-	},
+	-- window = {
+	-- 	completion = cmp.config.window.bordered({
+	-- 		border = "rounded",
+	-- 	}),
+	-- 	documentation = cmp.config.window.bordered({
+	-- 		border = "rounded",
+	-- 	}),
+	-- },
 	formatting = {
 		fields = { "kind", "abbr", "menu" },
 		format = function(_, vim_item)
@@ -106,3 +106,8 @@ vim.keymap.set("n", "gt", telescope_builtins.lsp_references, { desc = "LSP refer
 vim.keymap.set("n", "gd", telescope_builtins.lsp_definitions, { desc = "LSP definitions" })
 vim.keymap.set("n", "gi", telescope_builtins.lsp_implementations, { desc = "LSP lsp_implementations" })
 vim.keymap.set("n", "ga", vim.lsp.buf.code_action, { desc = "LSP code actions" })
+
+-- Enable inline errors
+vim.diagnostic.config({
+	virtual_text = true,
+})

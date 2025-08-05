@@ -1,36 +1,30 @@
-local servers = {
-	"cmake",
-	"clangd",
-	"lua_ls",
-	"pyright",
-	"rust_analyzer",
-
-	-- web development
-	"ts_ls",
-	"eslint",
-	"tailwindcss",
-}
-
-require("mason").setup({ PATH = "append" })
-require("mason-lspconfig").setup({ ensure_installed = servers })
-
 local lspconfig = require("lspconfig")
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+local servers = require("plugins.settings.lsp_servers")
 for _, server in ipairs(servers) do
-	lspconfig[server].setup({ capabilities = capabilities })
-end
-
--- Get the language server to recognize the `vim` global
-lspconfig.lua_ls.setup({
-	settings = {
-		Lua = {
-			diagnostics = {
-				globals = { "vim" },
+	if server == "pyright" then
+		lspconfig.pyright.setup({
+			capabilities = capabilities,
+			settings = {
+				python = {
+					analysis = {
+						diagnosticMode = "workspace",
+					},
+				},
 			},
-		},
-	},
-})
+		})
+	elseif server == "lua_ls" then
+		lspconfig.lua_ls.setup({
+			capabilities = capabilities,
+			settings = {
+				Lua = { diagnostics = { globals = { "vim" } } },
+			},
+		})
+	else
+		lspconfig[server].setup({ capabilities = capabilities })
+	end
+end
 
 -- Icons
 local kind_icons = {

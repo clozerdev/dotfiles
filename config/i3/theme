@@ -1,11 +1,12 @@
 # window positioning
-default_border normal 3
+default_border pixel 2
+default_floating_border pixel 2
 hide_edge_borders both
 title_align center
-gaps inner 10
+gaps inner 8
 
 # window aspect
-set $focused		#1393d0
+set $focused		#6a6299
 set $unfocused		#555555
 set $urgent			#aa0000
 set $foreground		#ffffff
@@ -15,4 +16,4 @@ client.unfocused $unfocused $unfocused $foreground $unfocused $unfocused
 client.focused_inactive $unfocused $unfocused $foreground $unfocused $unfocused
 client.urgent $urgent $urgent $foreground $urgent $urgent
 
-font xft:DejaVu Sans Bold 10
+font xft:MartianMono Nerd Font Mono 8

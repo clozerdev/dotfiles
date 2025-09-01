@@ -21,6 +21,13 @@ for _, server in ipairs(servers) do
 				Lua = { diagnostics = { globals = { "vim" } } },
 			},
 		})
+	elseif server == "blueprint_ls" then
+		lspconfig.blueprint_ls.setup({
+			cmd = { "blueprint-compiler", "lsp" },
+			filetypes = { "blueprint" },
+			root_dir = lspconfig.util.root_pattern(".git", ".project"),
+			capabilities = capabilities,
+		})
 	else
 		lspconfig[server].setup({ capabilities = capabilities })
 	end
@@ -102,6 +109,14 @@ vim.keymap.set("n", "gi", telescope_builtins.lsp_implementations, { desc = "LSP 
 vim.keymap.set("n", "ga", vim.lsp.buf.code_action, { desc = "LSP code actions" })
 
 -- Enable inline errors
-vim.diagnostic.config({
-	virtual_text = true,
+vim.diagnostic.config({ virtual_text = true })
+
+-- Enable inlay hints
+vim.api.nvim_create_autocmd("LspAttach", {
+	callback = function(args)
+		local client = vim.lsp.get_client_by_id(args.data.client_id)
+		if client and client.server_capabilities.inlayHintProvider then
+			vim.lsp.inlay_hint.enable(true, { id = args.data.client_id })
+		end
+	end,
 })

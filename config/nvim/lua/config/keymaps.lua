@@ -13,3 +13,7 @@ keymap.set("n", "<leader>bd", "<cmd>%bd<cr>", opts)
 
 -- Source files without leaving Neovim
 keymap.set("n", "<leader>x", "<cmd>source %<cr>", opts)
+
+-- Better indenting in visual mode
+keymap.set("v", "<", "<gv", opts)
+keymap.set("v", ">", ">gv", opts)

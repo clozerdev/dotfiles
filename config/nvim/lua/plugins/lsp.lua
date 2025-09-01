@@ -4,12 +4,12 @@ return {
 	-- LSP Configuration
 	{
 		"mason-org/mason-lspconfig.nvim",
-		opts = {
-			ensure_installed = servers,
-		},
 		dependencies = {
 			{ "mason-org/mason.nvim", opts = {} },
 			"neovim/nvim-lspconfig",
+		},
+		opts = {
+			ensure_installed = servers,
 		},
 
 		config = function()

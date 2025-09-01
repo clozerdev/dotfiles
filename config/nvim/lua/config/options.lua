@@ -9,8 +9,8 @@ opt.wrap = false
 opt.number = true
 opt.cmdheight = 0
 opt.scrolloff = 8
-opt.conceallevel = 2
 opt.showmode = false
+opt.conceallevel = 2
 opt.cursorline = false
 opt.signcolumn = "yes"
 opt.relativenumber = true
@@ -20,22 +20,22 @@ opt.background = "dark"
 opt.termguicolors = true
 
 -- folding
-opt.foldmethod = "indent"
 opt.foldlevel = 99
+opt.foldmethod = "indent"
 
 -- searching
-opt.smartcase = true
 opt.hlsearch = false
-opt.ignorecase = true
 opt.incsearch = true
+opt.smartcase = true
+opt.ignorecase = true
 
 -- splitting
 opt.splitbelow = true
 opt.splitright = true
 
 -- backups
-opt.swapfile = false
 opt.undofile = true
+opt.swapfile = false
 opt.writebackup = false
 
 -- indenting

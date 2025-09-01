@@ -7,5 +7,6 @@ return {
 	"eslint",
 	"pyright",
 	"tailwindcss",
+	"blueprint_ls",
 	"rust_analyzer",
 }

@@ -1,7 +1,6 @@
 # Autostart of some programs when i3 starts
 # exec_always	-> execute when reloading i3 or any configuration
-# exec		-> exceute only once when starting i3
+# exec			-> execute only once when starting i3
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always --no-startup-id /usr/local/bin/picom --config $HOME/.config/picom/picom.conf -b
-exec_always --no-startup-id /usr/bin/feh --bg-fill --no-fehbg $HOME/.config/wallpapers/cosmic.png
+exec_always --no-startup-id /usr/bin/feh --bg-fill --no-fehbg $HOME/.config/wallpapers/dragon.jpg

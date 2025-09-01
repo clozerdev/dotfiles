@@ -1,6 +1,6 @@
 # window positioning
-default_border pixel 2
-default_floating_border pixel 2
+default_border normal 2
+default_floating_border normal 2
 hide_edge_borders both
 title_align center
 gaps inner 8
@@ -16,4 +16,4 @@ client.unfocused $unfocused $unfocused $foreground $unfocused $unfocused
 client.focused_inactive $unfocused $unfocused $foreground $unfocused $unfocused
 client.urgent $urgent $urgent $foreground $urgent $urgent
 
-font xft:MartianMono Nerd Font Mono 8
+font xft:DejaVu Sans Bold 10

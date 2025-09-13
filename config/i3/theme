@@ -6,7 +6,7 @@ title_align center
 gaps inner 8
 
 # window aspect
-set $focused		#6a6299
+set $focused		#bd93f9
 set $unfocused		#555555
 set $urgent			#aa0000
 set $foreground		#ffffff

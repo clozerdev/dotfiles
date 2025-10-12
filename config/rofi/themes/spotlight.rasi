@@ -17,12 +17,16 @@
     spacing:    0;
 }
 
+configuration {
+	icon-theme: "Papirus";
+}
+
 window {
     background-color:   @bg0;
 
     location:       center;
 	anchor:			center;
-    width:          850px;
+    width:          600px;
     border:         0;
     border-radius:  0;
 }
@@ -40,8 +44,8 @@ inputbar {
 
 icon-search {
     expand:     false;
-    filename:   "search";
-    size: 28px;
+    filename:	"search-icon";
+    size:		28px;
 }
 
 icon-search, entry, element-icon, element-text {
@@ -51,7 +55,7 @@ icon-search, entry, element-icon, element-text {
 entry {
     font:   inherit;
 
-    placeholder         : "Search";
+    placeholder         : "Search...";
     placeholder-color   : @fg2;
 }
 

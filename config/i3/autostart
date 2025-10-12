@@ -3,4 +3,4 @@
 # exec			-> execute only once when starting i3
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always --no-startup-id /usr/bin/feh --bg-fill --no-fehbg $HOME/.config/wallpapers/mustang.jpg
+exec_always --no-startup-id /usr/bin/xwallpaper --zoom $HOME/.config/wallpapers/dragon.jpg

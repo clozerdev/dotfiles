@@ -37,11 +37,11 @@ workspace $pace1 output primary
 workspace $pace2 output primary
 workspace $pace3 output primary
 workspace $pace4 output primary
-workspace $pace5 output DisplayPort-0
-workspace $pace6 output DisplayPort-0
-workspace $pace7 output DisplayPort-0
-workspace $pace8 output DisplayPort-0
-workspace $pace9 output DisplayPort-0
+workspace $pace5 output nonprimary
+workspace $pace6 output nonprimary
+workspace $pace7 output nonprimary
+workspace $pace8 output nonprimary
+workspace $pace9 output nonprimary
 
 # switch to workspace
 bindsym $mod+1 workspace $pace1

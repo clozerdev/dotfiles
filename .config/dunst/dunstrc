@@ -1,0 +1,4 @@
+[global]
+	max_icon_size = 64
+    icon_theme = Papirus-Light, Papirus, Adwaita
+    enable_recursive_icon_lookup = true

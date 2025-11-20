@@ -1,0 +1,22 @@
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 13.5
+offset = { x = 0, y = -2 }
+glyph_offset = { x = 0, y = -1 }
+normal = { family = "DankMono Nerd Font Mono", style = "Bold" }
+
+[mouse]
+hide_when_typing = false
+
+[cursor]
+style = { shape = "Block", blinking = "Always" }
+blink_interval = 300
+
+[window]
+padding = { x = 0, y = 0 }
+
+[general]
+import = ["xterm.toml"]
+live_config_reload = true

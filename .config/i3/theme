@@ -1,0 +1,21 @@
+title_align center
+
+default_border pixel 2
+default_floating_border pixel 2
+
+hide_edge_borders both
+
+gaps inner 4
+
+# window aspect
+set $focused		#bd93f9
+set $unfocused		#555555
+set $urgent			#aa0000
+set $foreground		#ffffff
+
+client.focused			$focused	$focused	$foreground $focused	$focused
+client.unfocused		$unfocused	$unfocused	$foreground $unfocused	$unfocused
+client.focused_inactive $unfocused	$unfocused	$foreground $unfocused	$unfocused
+client.urgent			$urgent		$urgent		$foreground $urgent		$urgent
+
+font pango:monospace 8

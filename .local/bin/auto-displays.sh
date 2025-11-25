@@ -9,7 +9,7 @@ DP="DisplayPort-0"
 XRANDR_OUTPUT="$(/usr/bin/xrandr)"
 
 is_connected() {
-	grep -q "^$1 connected" <<< "$XRANDR_OUTPUT"
+	/usr/bin/grep -q "^$1 connected" <<< "$XRANDR_OUTPUT"
 }
 
 # Two external monitors, laptop lid closed
@@ -24,7 +24,6 @@ elif is_connected "$HDMI"; then
         --output "$INTERNAL" --off \
         --output "$HDMI" --primary --mode 1920x1080 --rate 120.00 --pos 0x0 \
         --output "$DP" --off
-
 # Only DisplayPort connected
 elif is_connected "$DP"; then
     /usr/bin/xrandr \

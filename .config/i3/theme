@@ -10,12 +10,12 @@ gaps inner 8
 # window aspect
 set $focused		#bd93f9
 set $unfocused		#555555
-set $urgent			#aa0000
+set $urgent			#ff5555
 set $foreground		#ffffff
 
 client.focused			$focused	$focused	$foreground $focused	$focused
 client.unfocused		$unfocused	$unfocused	$foreground $unfocused	$unfocused
 client.focused_inactive $unfocused	$unfocused	$foreground $unfocused	$unfocused
-client.urgent			$urgent		$urgent		$foreground $urgent		$urgent
+client.urgent			$urgent		$urgent		$foreground	$urgent		$urgent
 
 font pango:monospace 8

@@ -3,8 +3,8 @@
     follow = none
     width = 300
     height = 300
-    origin = top-center
-    offset = (10, 40)
+    origin = bottom-right
+    offset = (20, 50)
     scale = 0
     notification_limit = 0
 
@@ -23,12 +23,13 @@
     frame_width = 2
     frame_color = "#bd93f9"
     separator_color = frame
+	corner_radius = 7
 
     sort = yes
     idle_threshold = 120
 
     ### Text ###
-    font = DankMono Nerd Font Mono 12
+    font = Terminess Nerd Font Mono 12
     line_height = 0
     markup = full
     format = "<b>%s</b> %p\n%b"

@@ -23,7 +23,3 @@ include theme
 include winman
 include mediakeys
 include autostart
-
-bar {
-	status_command i3status
-}

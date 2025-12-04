@@ -1,11 +1,11 @@
 # Volume
-bindsym XF86AudioMute exec --no-startup-id $HOME/.config/i3/scripts/volume.sh volume_mute
-bindsym XF86AudioRaiseVolume exec --no-startup-id $HOME/.config/i3/scripts/volume.sh volume_up
-bindsym XF86AudioLowerVolume exec --no-startup-id $HOME/.config/i3/scripts/volume.sh volume_down
+bindsym XF86AudioMute exec --no-startup-id /usr/bin/wpctl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id /usr/bin/wpctl set-sink-volume @DEFAULT_SINK@ +10%
+bindsym XF86AudioLowerVolume exec --no-startup-id /usr/bin/wpctl set-sink-volume @DEFAULT_SINK@ -10%
 
 # Brightness
-bindsym XF86MonBrightnessUp exec --no-startup-id $HOME/.config/i3/scripts/brightness.sh up
-bindsym XF86MonBrightnessDown exec --no-startup-id $HOME/.config/i3/scripts/brightness.sh down
+bindsym XF86MonBrightnessUp exec --no-startup-id /usr/bin/brightnessctl set 10%+
+bindsym XF86MonBrightnessDown exec --no-startup-id /usr/bin/brightnessctl set 10%-
 
 # Microphone
-bindsym XF86AudioMicMute exec --no-startup-id $HOME/.config/i3/scripts/micmute.sh
+bindsym XF86AudioMicMute exec --no-startup-id /usr/bin/wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle

@@ -1,4 +1,139 @@
 [global]
-	max_icon_size = 64
-    icon_theme = Papirus-Light, Papirus, Adwaita
-    enable_recursive_icon_lookup = true
+    ### Display ###
+
+    # Which monitor should the notifications be displayed on.
+    monitor = 0
+
+    # Display notification on focused monitor.  Possible modes are:
+    #   mouse: follow mouse pointer
+    #   keyboard: follow window with keyboard focus
+    #   none: don't follow anything
+    #
+    # "keyboard" needs a window manager that exports the
+    # _NET_ACTIVE_WINDOW property.
+    # This should be the case for almost all modern window managers.
+    #
+    # If this option is set to mouse or keyboard, the monitor option
+    # will be ignored.
+    follow = none
+
+    ### Geometry ###
+
+    # dynamic width from 0 to 300
+    # width = (0, 300)
+    # constant width of 300
+    width = 300
+
+    # The maximum height of a single notification, excluding the frame.
+    height = 300
+
+    # Position the notification in the top right corner
+    origin = bottom-right
+
+    # Offset from the origin
+    offset = 20x50
+
+    # Scale factor. It is auto-detected if value is 0.
+    scale = 0
+
+    # Maximum number of notification (0 means no limit)
+    notification_limit = 0
+
+    ### Progress bar ###
+
+    # Turn on the progess bar. It appears when a progress hint is passed with
+    # for example dunstify -h int:value:12
+    progress_bar = true
+
+    # Set the progress bar height. This includes the frame, so make sure
+    # it's at least twice as big as the frame width.
+    progress_bar_height = 10
+
+    # Set the frame width of the progress bar
+    progress_bar_frame_width = 1
+
+    # Set the minimum width for the progress bar
+    progress_bar_min_width = 150
+
+    # Set the maximum width for the progress bar
+    progress_bar_max_width = 300
+
+    # Show how many messages are currently hidden (because of
+    # notification_limit).
+    indicate_hidden = yes
+
+    # Draw a line of "separator_height" pixel height between two
+    # notifications.
+    # Set to 0 to disable.
+    separator_height = 1
+
+    # Padding between text and separator.
+    padding = 8
+
+    # Horizontal padding.
+    horizontal_padding = 10
+
+    # Padding between text and icon.
+    text_icon_padding = 0
+
+    # Defines width in pixels of frame around the notification window.
+    frame_width = 1
+
+    # Defines color of the frame around the notification window.
+    frame_color = "#bd93f9"
+
+    # Define a color for the separator.
+    separator_color = frame
+
+    # Sort messages by urgency.
+    sort = yes
+
+    # Don't remove messages, if the user is idle (no mouse or keyboard input)
+    # for longer than idle_threshold seconds.
+    # Set to 0 to disable.
+    # A client can set the 'transient' hint to bypass this. See the rules
+    # section for how to disable this if necessary
+    idle_threshold = 120
+
+    ### Text ###
+    font = DankMono Nerd Font Mono 11.5
+    line_height = 0
+    markup = full
+    format = "<b>%s</b> %p\n%b"
+    alignment = left
+    vertical_alignment = center
+    show_age_threshold = 60
+    ellipsize = middle
+    ignore_newline = no
+    stack_duplicates = true
+    hide_duplicate_count = false
+    show_indicators = yes
+
+    ### Icons ###
+    icon_position = left
+    min_icon_size = 32
+    max_icon_size = 32
+    icon_path = /usr/share/icons/Papirus-Light/16x16/status/:/usr/share/icons/Papirus-Light/16x16/devices/
+
+    ### History ###
+    sticky_history = yes
+    history_length = 20
+
+    ### Legacy ###
+    force_xinerama = false
+
+[urgency_low]
+    background = "#282a36"
+    foreground = "#6272a4"
+    timeout = 10
+
+[urgency_normal]
+    background = "#282a36"
+    foreground = "#bd93f9"
+    timeout = 10
+
+[urgency_critical]
+    background = "#ff5555"
+    foreground = "#f8f8f2"
+    frame_color = "#ff5555"
+    timeout = 0

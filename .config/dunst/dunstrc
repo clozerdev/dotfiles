@@ -3,7 +3,7 @@
     follow = none
     width = 300
     height = 300
-    origin = bottom-right
+    origin = top-right
     offset = (20, 50)
     scale = 0
     notification_limit = 0
@@ -29,7 +29,7 @@
     idle_threshold = 120
 
     ### Text ###
-    font = Terminess Nerd Font Mono 12
+    font = UbuntuMono Nerd Font Mono 12
     line_height = 0
     markup = full
     format = "<b>%s</b> %p\n%b"

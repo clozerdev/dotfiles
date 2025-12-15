@@ -35,7 +35,7 @@ configuration {
     alternate-urgent-foreground: var(background);
     alternate-active-background: var(active);
     alternate-active-foreground: var(background);
-    font: "Terminess Nerd Font Mono 13";
+    font: "Mononoki Nerd Font Mono 12";
 }
 
 window {

@@ -5,10 +5,10 @@ default_floating_border pixel 2
 
 hide_edge_borders both
 
-gaps inner 8
+gaps inner 6
 
 # window aspect
-set $focused		#bd93f9
+set $focused		#56b6c2
 set $unfocused		#555555
 set $urgent			#ff5555
 set $foreground		#ffffff

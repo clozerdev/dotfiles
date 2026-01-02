@@ -1,3 +1,2 @@
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always --no-startup-id /usr/bin/picom --config $HOME/.config/picom/picom.conf -b
 exec_always --no-startup-id /usr/bin/xwallpaper --zoom $HOME/.config/wallpapers/itachi.jpg

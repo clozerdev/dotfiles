@@ -1,0 +1,18 @@
+#!/bin/sh
+
+export TERMINAL=alacritty
+
+# Load resources
+user_resources=$HOME/.Xresources
+if [ -r "$user_resources" ]; then
+	/usr/bin/xrdb -merge $user_resources
+fi
+
+# Set arrow pointer instead of loading
+/usr/bin/xsetroot -cursor_name left_ptr
+
+# Tools
+$HOME/.local/bin/auto-displays.sh
+
+# Window manager execution on a D-Bus session
+exec /usr/bin/dbus-run-session -- /usr/local/bin/i3

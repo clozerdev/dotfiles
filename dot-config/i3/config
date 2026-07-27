@@ -1,0 +1,43 @@
+# Set modifier keys
+set $mod Mod4
+set $alt Mod1
+
+# Behaviour
+mouse_warping none
+focus_wrapping workspace
+focus_follows_mouse yes
+workspace_auto_back_and_forth yes
+
+# Commands
+bindsym $mod+f fullscreen
+bindsym $mod+Shift+q kill
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+
+# Applications
+bindsym $mod+d exec --no-startup-id /usr/bin/rofi -show drun -show-icons
+bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
+
+# Includes
+include theme
+include winman
+include autostart
+
+# bar {
+# 	font pango:Berkeley Mono 9
+#
+# 	position top
+# 	status_command i3status
+#
+# 	colors {
+#         background #1c1b1a
+#         statusline #ded6c9
+#         separator  #2b2926
+#
+#         focused_workspace  #3f3a34 #3f3a34 #ded6c9
+#         active_workspace   #2b2926 #2b2926 #b8afa2
+#         inactive_workspace #1c1b1a #1c1b1a #7f7a72
+#         urgent_workspace   #ff5555 #ff5555 #ded6c9
+#         binding_mode       #ff5555 #ff5555 #ded6c9
+#     }
+# }

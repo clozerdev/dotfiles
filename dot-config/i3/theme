@@ -1,0 +1,22 @@
+# Title
+title_align center
+
+# Spacing
+gaps inner 4
+gaps outer 4
+
+# Borders
+default_border pixel 2
+default_floating_border pixel 2
+
+hide_edge_borders none
+
+# Class                 border  bground text    indicator child_border
+client.focused          #a9b665 #32302f #d4be98 #89b482   #a9b665
+client.focused_inactive #665c54 #282828 #a89984 #665c54   #665c54
+client.unfocused        #45403d #282828 #7c6f64 #45403d   #45403d
+client.urgent           #ea6962 #442e2d #d4be98 #ea6962   #ea6962
+client.placeholder      #1d2021 #1d2021 #7c6f64 #1d2021   #1d2021
+client.background       #282828
+
+font xft:Terminess Nerd Font Mono 10

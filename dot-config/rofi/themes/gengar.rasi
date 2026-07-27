@@ -1,0 +1,153 @@
+configuration {
+    modi: "drun";
+    show-icons: true;
+    display-drun: "󰍉";
+    drun-display-format: "{name}";
+}
+
+* {
+    bg:         #171a27ff;
+    bg-alt:     #11092dff;
+    fg:         #b9bce0ff;
+    muted:      #7c77b3ff;
+    purple:     #6848a1ff;
+    purple2:    #281657ff;
+    pink:       #df5296ff;
+    lavender:   #bb9fe5ff;
+
+    background-color: transparent;
+    text-color: @fg;
+
+    font: "Terminess Nerd Font Mono 12";
+}
+
+window {
+    width: 760;
+    height: 400;
+    location: center;
+    anchor: center;
+
+    border: 0;
+    border-radius: 0;
+    background-color: @bg;
+}
+
+mainbox {
+    orientation: horizontal;
+    spacing: 0;
+    children: [ left-panel, right-panel ];
+    background-color: transparent;
+}
+
+left-panel {
+    orientation: vertical;
+    width: 380;
+    padding: 12;
+
+    background-color: @purple2;
+    background-image: url("~/.config/wallpapers/gengar_rofi.jpg", height);
+    border-radius: 0;
+
+    children: [ inputbar, spacer ];
+}
+
+right-panel {
+    orientation: vertical;
+    width: 380;
+    padding: 8;
+
+    background-color: @bg-alt;
+    border-radius: 0;
+
+    children: [ listview ];
+}
+
+inputbar {
+    height: 34;
+    padding: 8 10;
+    border-radius: 6;
+    background-color: #3a185aff;
+
+    children: [ prompt, entry ];
+}
+
+prompt {
+    enabled: true;
+    text-color: @lavender;
+    padding: 0 8 0 0;
+}
+
+entry {
+    placeholder: "Search";
+    placeholder-color: @muted;
+    text-color: @fg;
+    background-color: transparent;
+}
+
+spacer {
+    expand: true;
+    background-color: transparent;
+}
+
+listview {
+    lines: 8;
+    columns: 1;
+    spacing: 6;
+    scrollbar: true;
+    fixed-height: true;
+
+    background-color: transparent;
+}
+
+scrollbar {
+    width: 4;
+    border: 0;
+    handle-width: 4;
+    padding: 0;
+    background-color: transparent;
+    handle-color: #7c77b355;
+    border-radius: 4;
+}
+
+scrollbar handle {
+    background-color: #7c77b355;
+    border-radius: 4;
+}
+
+element {
+    orientation: horizontal;
+    spacing: 8;
+    padding: 8 10;
+    border-radius: 6;
+    background-color: transparent;
+
+    children: [ element-icon, element-text ];
+}
+
+element selected {
+    background-color: @pink;
+    text-color: #ffffffff;
+}
+
+element-icon {
+    size: 16;
+    background-color: transparent;
+}
+
+element-text {
+    text-color: inherit;
+    background-color: transparent;
+    vertical-align: 0.5;
+}
+
+element normal.normal {
+    text-color: @fg;
+}
+
+element alternate.normal {
+    text-color: @fg;
+}
+
+element selected.normal {
+    text-color: #ffffffff;
+}

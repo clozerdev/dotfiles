@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # Monitor names
-DP="DisplayPort-0"
+DP="DisplayPort-1"
 HDMI="HDMI-A-0"
 INTERNAL="eDP"
 
